@@ -7,7 +7,7 @@ import { IoIosRemoveCircleOutline } from "react-icons/io";
 import { removeFromBag } from '../../context/features/bagSlice';
 import { useEffect, useState } from 'react';
 import { GrCopy } from "react-icons/gr";
-
+import { Font, FontStyle, FontWeight } from '../../types';
 
 
 const Bag = ({open, setOpen} : {open: boolean, setOpen: React.Dispatch<React.SetStateAction<boolean>>}) => {
@@ -17,7 +17,7 @@ const Bag = ({open, setOpen} : {open: boolean, setOpen: React.Dispatch<React.Set
   const [fontURL, setFontUrl] = useState<string>("");
 
   useEffect(() => {
-    const generateFontUrl = (font) => {
+    const generateFontUrl = (font: any) => {
       const apiUrl = ['https://fonts.googleapis.com/css?family='];
       apiUrl.push(font.family.replace(/ /g, '+'));
       if (font.fontStyles && font.fontStyles.includes('italic')) {
@@ -65,7 +65,7 @@ const Bag = ({open, setOpen} : {open: boolean, setOpen: React.Dispatch<React.Set
         <p>Style:</p>
         <div className='font-style-wrapper' key={v4()}>
         { chosenFont && 
-          chosenFont.filter((font, index, self) => self.findIndex(f => f.family === font.family) === index).map(font =>
+          chosenFont.filter((font, index, self) => self.findIndex((f) => f.family === font.family) === index).map(font =>
               <p key={font.family}>font-family: "{font.family}", sans-serif;</p>
             )
         }

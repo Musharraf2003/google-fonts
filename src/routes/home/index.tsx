@@ -3,7 +3,6 @@ import Hero from "../../components/hero/Hero"
 import Nav from "../../components/nav/Nav"
 import Sidebar from "../../components/sidebar/Sidebar"
 import Container from "../../components/container/Container"
-import Bag from "../../components/bag/Bag"
 import Footer from '../../components/footer/Footer'
 
 const Home = () => {
@@ -18,7 +17,6 @@ const Home = () => {
       <Hero searchQuery={searchQuery} />
       <Footer/>
       </Container>
-      <Bag />
     </div>
   )
 }

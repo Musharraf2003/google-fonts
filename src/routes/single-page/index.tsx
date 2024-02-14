@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react"
-import Nav from "../../components/nav/Nav"
-import { Font } from "../../types"
+import { Font, FontStyle, FontWeight } from "../../types"
 import { useParams } from "react-router-dom";
 import { v4 } from "uuid";
 import './SingleP.scss';
@@ -70,7 +69,7 @@ const SinglePage = () => {
              <div className="font-details" key={v4()}>
                <hr />
                <span>{key.includes('italic') ? key.replace('italic', ' italic') : key}</span>
-               <button onClick={() => handleClickAndAdd(key, value, family)} className="select-style-btn">select {key.includes('italic') ? key.replace('italic', ' italic') : key} <IoMdAddCircleOutline/></button>
+               <button onClick={() => handleClickAndAdd(key, value, family as string)} className="select-style-btn">select {key.includes('italic') ? key.replace('italic', ' italic') : key} <IoMdAddCircleOutline/></button>
                <p style={{ fontFamily: family, fontWeight, fontStyle: key.includes('italic') ? 'italic' : 'normal' }}>Whereas disregard and contempt for human rights have resulted</p>
                <hr />
              </div>
@@ -84,7 +83,6 @@ const SinglePage = () => {
     <>
     <div className="single-page">
       <div>
-      <Nav/>
       <div className="single-font-page">
         {renderFontFace()}
         <div className="single-font-header">

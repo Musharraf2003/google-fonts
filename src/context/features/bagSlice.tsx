@@ -14,8 +14,8 @@ const bagSlice = createSlice({
     initialState,
     reducers: {
         addToBag: (state, action: PayloadAction<FontStyle | FontWeight>) => {
-            const newItem = action.payload;
-            const isDuplicate = state.items.some(item => (
+            const newItem: any = action.payload;
+            const isDuplicate = state.items.some((item: any) => (
                 item.fontWeight === newItem.fontWeight && item.fontStyle === newItem.fontStyle
             ));
             if (!isDuplicate) {
@@ -24,8 +24,8 @@ const bagSlice = createSlice({
             }
         },
         removeFromBag: (state, action: PayloadAction<FontStyle | FontWeight>) => {
-            const itemToRemove = action.payload;
-            state.items = state.items.filter(item => (
+            const itemToRemove: any = action.payload;
+            state.items = state.items.filter((item: any) => (
                 item.fontWeight !== itemToRemove.fontWeight || item.fontStyle !== itemToRemove.fontStyle
             ));
             localStorage.setItem('bag', JSON.stringify(state.items));

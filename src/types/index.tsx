@@ -15,9 +15,11 @@ export type Font = {
 }
 
 export interface FontWeight {
-    value: number; 
+    value: number;
+    family: string; 
 }
 
 export interface FontStyle {
     value: 'italic' | 'normal';
+    family: string; 
 }
