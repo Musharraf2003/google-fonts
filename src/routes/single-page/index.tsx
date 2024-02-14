@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { Font, FontStyle, FontWeight } from "../../types"
+import { Font } from "../../types"
 import { useParams } from "react-router-dom";
 import { v4 } from "uuid";
 import './SingleP.scss';

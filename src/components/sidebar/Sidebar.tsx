@@ -31,9 +31,10 @@ const Sidebar = () => {
         setValue(fontSize); 
     }, [fontSize]);
 
-    const handleSliderChange = (event: Event, newValue: number | number[]) => {
+    const handleSliderChange = (e: Event, newValue: number | number[]) => {
         setValue(newValue as number);
         dispatch(setFontSize(newValue as number)); 
+        console.log(e)
       };
     
       const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -52,6 +53,7 @@ const Sidebar = () => {
 
     const handleNumberofStyles = (e: Event, newValue: number | number[]) => {
         dispatch(setNumberOfStyles(newValue as number));
+        console.log(e)
     }
 
     return isOpen && (

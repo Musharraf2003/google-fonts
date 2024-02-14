@@ -22,7 +22,6 @@ const Hero = ({searchQuery} : {searchQuery: string}) => {
   const [searchFonts, setSearchFonts] = useState<Font[]>([]);
   const textValue = useSelector((state: RootState) => state.text.value);
   const setFontSize = useSelector((state: RootState) => state.fontSize.value);
-  const numberOfStyles = useSelector((state: RootState) => state.fontStyles.numberOfStyles);
 
   useEffect(() => {
     const fetchFonts = async () => {

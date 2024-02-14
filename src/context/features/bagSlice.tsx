@@ -13,7 +13,7 @@ const bagSlice = createSlice({
     name: 'bag',
     initialState,
     reducers: {
-        addToBag: (state, action: PayloadAction<FontStyle | FontWeight>) => {
+        addToBag: (state, action: PayloadAction<FontStyle | FontWeight | any>) => {
             const newItem: any = action.payload;
             const isDuplicate = state.items.some((item: any) => (
                 item.fontWeight === newItem.fontWeight && item.fontStyle === newItem.fontStyle

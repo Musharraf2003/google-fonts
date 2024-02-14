@@ -3,9 +3,9 @@ import fonts_logo from '../../assets/google-fonts-seeklogo.svg';
 import { AiOutlineSearch } from "react-icons/ai";
 import { useState } from 'react'
 import { v4 } from 'uuid';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { setSelectedOption } from '../../context/features/optionSlice';
-import { AppDispatch, RootState } from '../../context/store';
+import { AppDispatch } from '../../context/store';
 import { FiX } from 'react-icons/fi';
 
 

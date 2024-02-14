@@ -7,7 +7,6 @@ import { IoIosRemoveCircleOutline } from "react-icons/io";
 import { removeFromBag } from '../../context/features/bagSlice';
 import { useEffect, useState } from 'react';
 import { GrCopy } from "react-icons/gr";
-import { Font, FontStyle, FontWeight } from '../../types';
 
 
 const Bag = ({open, setOpen} : {open: boolean, setOpen: React.Dispatch<React.SetStateAction<boolean>>}) => {
