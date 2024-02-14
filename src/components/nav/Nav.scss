@@ -1,0 +1,81 @@
+.nav_wrapper {
+    width: 100%;
+    margin: 40px auto;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    gap: 0 25px;
+    padding-left: 20px;
+    padding-right: 20px;
+    .nav_logo_wrapper {
+        display: flex;
+        align-items: center;
+        font-size: 25px;
+        font-weight: 500;
+        gap: 0 10px;
+        .nav_logo_title {
+            color: rgb(95,99,103);
+            white-space: nowrap;
+            &:last-child {
+                font-weight: 400;
+            }
+        }
+    }
+    .search_form {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        background-color: rgb(243,246,251);
+        border-radius: 35px;
+        width: 100%;
+        height: 56px;
+        position: relative;
+        .search-icon {
+            padding-left: 16px;
+            padding-top: 5px;
+            color: #5F6367;
+            font-size: 25px;
+        }
+        .delete-search {
+            position: absolute;
+            color: #5F6367;
+            font-size: 25px;
+            right: 280px;
+            top: 16px;
+        }
+        input {
+            outline: none;
+            background-color: #F3F6FB;
+            border: none;
+            font-size: 18px;
+            border-right: 1px solid #D5D8DC;
+            padding: 0 300px 0 0;
+            width: 100%;
+            height: 100%;
+        }
+        select {
+            display: flex;
+            flex-direction: column;
+            min-width: 200px;
+            cursor: pointer;
+            outline: none;
+            font-size: 18px;
+            border: none;
+            background-color: #F3F6FB;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            background: transparent;
+            background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='30' viewBox='0 0 24 24' width='30' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+            background-repeat: no-repeat;
+            background-position-x: 100%;
+            background-position-y: (-4px);
+            border-radius: 2px;
+            margin-right: 2rem;
+        }
+    }
+}
+
+
+

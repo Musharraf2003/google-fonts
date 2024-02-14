@@ -1,0 +1,72 @@
+
+
+.hero {
+    width: 100%;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    & > small {
+        color: #6D7074;
+        margin-left: 20px;
+    }
+    .filter {
+        max-width: 120px;
+        width: 100%;
+        margin: 40px 20px;
+        display: flex;
+        align-items: center;
+        color: #1B72E8;
+        padding: 0 25px;
+        gap: 8px;
+        border-radius: 20px;
+        height: 40px;
+        border: 1px solid #1B72E8;
+        background-color: #fff;
+        font-size: 16px;
+        cursor: pointer;
+        &.isOpen {
+            background:#1B72E8;
+            color: #fff;
+        }
+        &:hover {
+            background:#1B72E8;
+            color: #fff;
+        }
+    }
+    .hero-font_card {
+        width: 100%;
+        height: 157px;
+        display: flex;
+        flex-direction: column;
+        padding: 15px 10px 0 20px;
+        justify-content: space-between;
+        border-radius: 10px;
+        cursor: pointer;
+        text-decoration: none;
+        &:hover {
+            background-color: lightgray;
+        }
+        .font-text {
+            white-space: nowrap;
+            resize: none;
+            width: 100%;
+            word-break: break-word;
+            font-size: 40px;     
+            overflow-x: hidden;
+            color: #000;  
+        }
+    }
+    .font-family-name {
+        margin-top: 20px;
+        display: flex;
+        gap: 5px;
+        font-size: 16px;
+        & > p:first-child {
+            font-weight: 600;
+            color: #000;  
+        }
+        & > p:last-child {
+            color: #5F6367;
+        }
+    }
+}

@@ -1,0 +1,122 @@
+.sidebar-menu {
+    min-width: 300px;
+    max-width: 300px;
+    width: 100%;
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    left: -300px;
+    transition: left 0.3s;
+    background-color: #F7FAFD;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px;
+    border-radius: 20px 20px 0 0; 
+    & > hr {
+        margin: 20px 0;
+    }
+    & > p {
+        font-size: 18px;
+        color: #202021;
+        margin-bottom: 20px;
+    }
+    textarea {
+        padding: 20px;
+        margin: 0 10px;
+        border: none;
+        background-color: #E7F0FE;
+        border-radius: 20px;
+        outline: none;
+        font-size: 16px;
+        &::placeholder {
+            font-size: 16px;
+        }
+    }
+    .sidebar_reset {
+        display: flex; 
+        align-items: center;
+        justify-content: end;
+        margin-bottom: 20px;
+        gap: 15px;
+        .reset-btn {
+            border: none;
+            background-color:  #F7FAFD;
+            border-radius: 5px;
+            font-size: 18px;
+            color: #1B72E8;
+            display: flex;
+            align-items: center;
+            gap: 0 5px;
+            padding: 5px 15px;
+            &:hover {
+                background-color: #E7F0FE;
+            }
+        }
+       .close-btn {
+            border: none;
+            border-radius: 50%;
+            font-size: 25px;
+            padding: 10px 10px;
+            background-color: #F7FAFD;
+            display: flex;
+            align-items: center;
+            color: rgb(128, 128, 128);
+            &:hover {
+                background-color: #E7F0FE;
+                color: #000;
+            }
+        }
+    }
+    .font-range_wrapper {
+        margin: 20px 0;
+        Slider {
+           max-width: 40px;
+           width: 100%;
+        }
+    }
+    .decoration_wrapper {
+        background-color: #F7FAFD;
+        box-shadow: none;
+        margin-bottom: 30px;
+        font-size: 20px;
+        display: flex;
+        flex-direction: column;
+        .decoration_title:hover {
+            background-color: lightgray;
+
+        }
+        
+        .btn_wrapper {
+            display: flex;
+            gap: 5px 7px;
+            flex-wrap: wrap;
+            button {
+                background-color: rgb(231,240,254);
+                border: none;
+                padding: 8px 15px;
+                font-size: 16px;
+                white-space: nowrap;
+                border-radius: 10px;
+            }
+        }
+    }
+
+    .properties_wrapper {
+        background-color: #F7FAFD;
+        box-shadow: none;
+        font-size: 20px;
+        .properties_title:hover {
+            background-color: lightgray;
+        }
+        
+        .properties-input_wrapper {
+            display: flex;
+            gap: 0 3px;
+            font-size: 16px;
+        }
+    }
+
+}
+.sidebar-menu.isOpen {
+    left: 0;
+}

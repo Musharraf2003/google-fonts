@@ -1,0 +1,68 @@
+
+.footer {
+    width: 100%;
+    padding: 0 90px;
+    margin: 0 auto;
+    max-height: 500px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    .footer-content-wrapper {
+        display: flex;
+        gap: 0 40px;
+        width: 100%;
+        padding-top: 120px;
+        .about-us-wrapper {
+            margin: 20px 0;
+            display: flex;
+            flex-direction: column;
+            list-style-type: none;
+            // width: 70%;
+            gap: 10px 0;
+            & > li {
+                display: flex;
+                align-items: center;
+                gap: 0 15px;
+                & > svg {
+                    width: 100px;
+                    height: 100px;
+                }
+                .google-design-icon {
+                    width: 150px;
+                    height: 150px;
+                    color:  #1966D2;
+                }
+            }
+            .about-description {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                & > span {
+                    font-size: 16px;
+                }
+                & > p {
+                    font-size: 14px;
+                    color: gray;
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .google-fonts-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 50px 0;
+        .google-fonts-header {
+            font-size: 20px;
+            color: gray;
+            & > span {
+                font-size: 25px;
+                color: #000;
+            }
+        }
+        .google-fonts-description {
+            font-size: 16px;
+            padding-right: 100px;
+        }
+    }
+}
